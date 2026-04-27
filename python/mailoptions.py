@@ -5,8 +5,8 @@ from ipalib.text import _
 # command line settings for ipa client.
 user.user.takes_params = user.user.takes_params + (
     Str(
-        "maildeliveroption?",
-        cli_name="maildeliveroption",
+        "maildeliveryoption?",
+        cli_name="maildeliveryoption",
         label=_("Mail Delivery Option"),
         doc=_(
             "Defines mailDeliveryOption Attribute"
