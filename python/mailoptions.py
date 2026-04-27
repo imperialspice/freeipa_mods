@@ -15,7 +15,7 @@ user.user.takes_params = user.user.takes_params + (
         ),
         default="OK",
         autofill=True,
-        pattern="^([0-9a-zA-Z\s]+)$",
+        pattern="^([0-9a-zA-Z\\s]+)$",
         pattern_errmsg="".join(
             'May only contain numbers and letters and spaces'
         ),
