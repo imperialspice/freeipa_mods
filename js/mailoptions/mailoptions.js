@@ -24,6 +24,10 @@ mail_options_plugin.add_mailoptions = function() {
             name: 'mailquota',
             label: 'Mail Quota',
             flags: ['w_if_no_aci']
+        },{
+                name: 'mailAccessDomain',
+                label: "Mail Access Domain",
+                flags: ['w_if_no_aci']
         });
         return true;
 };

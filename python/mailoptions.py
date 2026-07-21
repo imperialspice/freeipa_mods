@@ -36,11 +36,29 @@ user.user.takes_params = user.user.takes_params + (
             'May only be possible sizes in the format, [XX..X][M/G/T](B)'
         ),
     ),
+) + (
+    Str(
+        "mailaccessdomain?",
+        cli_name="mailaccessdomain",
+        label=_("Mail Access Domain"),
+        doc=_(
+            "Defines mailAccessDomain Attribute"
+            "Sets MAIL FROM domain, uses smtpd_sender_restrictions"
+            "See POSTFIX server access table."
+        ),
+        default="*",
+        autofill=True,
+        pattern="^([\*0-9a-zA-Z\\s]+)$",
+        pattern_errmsg="".join(
+            'Should container either, * or a email or domain.'
+        ),
+    ),
 )
 
 # add attribute classes to defaults when users are processed
 user.user.default_attributes.append("mailDeliveryOption")
 user.user.default_attributes.append("mailQuota")
+user.user.default_attributes.append("mailAccessDomain")
 
 
 # add structural classes to attributes in cases they are missing. 
