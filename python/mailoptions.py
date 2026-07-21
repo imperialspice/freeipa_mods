@@ -48,7 +48,7 @@ user.user.takes_params = user.user.takes_params + (
         ),
         default="*",
         autofill=True,
-        pattern="^([0-9a-zA-Z\\s*]+)$",
+        pattern="^([0-9a-zA-Z\\s*.]+)$",
         pattern_errmsg="".join(
             'Should container either, * or a email or domain.'
         ),
